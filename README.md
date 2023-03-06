@@ -1,5 +1,10 @@
 # Template para crear el webserver y estructura de API
 
+# Version de Node
+```
+18.12.1
+```
+
 # Instalar dependencias
 ```
 npm i
