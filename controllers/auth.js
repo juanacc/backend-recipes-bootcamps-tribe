@@ -29,7 +29,7 @@ const signup = async (req, res = response) => {
     } catch (error) {
         console.log(error);
         res.status(500).json({
-            msg: 'Internal error'
+            msg: 'There is something wrong that is not right :)'
         })
     }
 }
@@ -68,7 +68,7 @@ const login = async (req, res = response) => {
     } catch (error) {
         console.log(error);
         res.status(500).json({
-            msg: 'Internal error'
+            msg: 'There is something wrong that is not right :)'
         })
     }
 }

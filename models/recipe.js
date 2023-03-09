@@ -15,11 +15,14 @@ const RecipeSchema = Schema({
             amount: String,
             name: String
         }],
-        required: false
+        //required: false
     },
     imagePath: {
         type: String,
         required: [true, 'Image Path is required'],
+    },
+    userEmail: {
+        type: String,   
     }
 });
 

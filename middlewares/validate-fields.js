@@ -10,7 +10,7 @@ const validateFields = ( req, res, next ) => {
 }
 
 const validateAddRecipes = (req, res, next) => {
-    if(Object.keys(req.body).length === 0)
+    if(Object.keys(req.body))
         return res.status(400).json({msg: "Recipe can't be empty"});
     next();
 }

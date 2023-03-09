@@ -9,6 +9,7 @@ const router = Router();
 router.post('/signup', 
     [
         check('password', 'The password must be more than 6 letters').isLength({ min: 6 }),
+        check('email', 'The email is required').notEmpty(),
         check('email', 'The email is not valid').isEmail(),
         check('email').custom(validateEmailInDB), 
         validateFields
@@ -17,8 +18,8 @@ router.post('/signup',
     
 router.post('/login', 
     [
-        check('email', 'Email is required'),
-        check('password', 'Password is required'),
+        check('email', 'Email is required').notEmpty(),
+        check('password', 'Password is required').notEmpty(),
         validateFields
     ],
     login);
