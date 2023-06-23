@@ -14,7 +14,7 @@ const signup = async (req, res = response) => {
         user.password = bcryptjs.hashSync(password, salt);
 
         //Generate JWT
-        user.idToken = await generateJWT(user.uid);
+        user.idToken = await generateJWT(user._id);
 
         //Save to DB
         await user.save();
